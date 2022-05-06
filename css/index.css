@@ -1,0 +1,497 @@
+:root {
+    --dark-color: #19283f;
+    --red-color: #ff3150;
+    --section-color: #eff7fa;
+    --main-transition: 300ms;
+}
+body {
+    font-family: "Roboto", sans-serif;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #19283f;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--red-color);
+    border-radius: 50px;
+}
+
+.main-btn {
+    background-color: var(--red-color);
+    color: white;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    transition: var(--main-transition);
+}
+.main-btn:hover {
+    background-color: var(--red-color);
+    color: white;
+}
+.main-title {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+.main-title::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background-color: var(--red-color);
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+}
+.main-title img {
+    margin-bottom: 1.5rem;
+}
+.main-title p {
+    color: #7f7f7f;
+    text-transform: uppercase;
+}
+/* Start Navpar */
+.navbar {
+    background-color: transparent;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1200;
+    transition: var(--main-transition);
+}
+.navbar-brand {
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    text-decoration: none;
+    white-space: nowrap;
+    color: white;
+    font-size: 2.3rem;
+    font-family: fantasy;
+}
+.navbar .navbar-brand:hover {
+    color: white;
+}
+.navbar .navbar-nav .nav-link {
+    color: white;
+    transition: var(--main-transition);
+    position: relative;
+}
+.navbar .nav-link::before {
+    position: absolute;
+    content: "";
+    background-color: var(--red-color);
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    transition: var(--main-transition);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navbar .nav-link:hover::before,
+.navbar .nav-link.active::before {
+    width: 100%;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--red-color);
+}
+.navbar .navbar-toggler {
+    color: white;
+    font-size: 25px;
+    border-color: white;
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+    border-color: var(--red-color);
+}
+.navbar .main-btn {
+    position: relative;
+}
+.navbar .main-btn::before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: var(--red-color);
+}
+.navbar .lng {
+    padding: 0.1rem 0.7rem;
+}
+.navbar .lng:hover {
+    background-color: white;
+    color: var(--red-color);
+}
+/* End Navpar */
+/* Start btn Up */
+.btn-up svg {
+    border-radius: 10px;
+    padding: 5px;
+    background-color: var(--red-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.btn-up svg:hover {
+    background-color: white;
+    box-shadow: #777 0 0 3px 0;
+    color: var(--red-color);
+}
+.btn-up {
+    transform: translateX(55px);
+    transition: var(--main-transition);
+    z-index: 1000;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+.btn-up.show {
+    transform: none;
+}
+/* End btn Up */
+/* Start Landing  */
+.landing {
+    background-image: url(../imgs/landing.png);
+    background-position: right;
+    position: relative;
+    background-color: var(--dark-color);
+    z-index: 1;
+    min-height: 100vh;
+}
+.landing::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.landing .layers {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    overflow: hidden;
+    bottom: 0;
+}
+.landing .layers .layer-1 {
+    position: absolute;
+    content: "";
+    background-color: #ff315049;
+
+    width: 1000px;
+    left: 47%;
+    top: -6%;
+    clip-path: polygon(22% 43%, 22% 95%, 81% 54%);
+    z-index: -1;
+    height: 1000px;
+}
+.landing .layers .layer-2 {
+    position: absolute;
+    content: "";
+    background-color: #ff315049;
+    width: 1000px;
+    left: 42%;
+    top: -28%;
+    clip-path: polygon(18% 73%, 50% 27%, 79% 64%);
+    z-index: -1;
+    height: 1000px;
+}
+.landing .layers .layer-3 {
+    position: absolute;
+    content: "";
+    background-color: #ff315049;
+
+    width: 200px;
+    left: 4%;
+    top: 65%;
+    clip-path: polygon(93% 28%, 50% 27%, 79% 64%);
+    z-index: -1;
+    height: 200px;
+}
+.landing .layers .layer-4 {
+    position: absolute;
+    content: "";
+    background-color: #ff315049;
+
+    width: 200px;
+    width: 200px;
+    left: 25%;
+    clip-path: polygon(50% 32%, 39% 65%, 77% 57%);
+    z-index: -1;
+    height: 200px;
+}
+
+.landing .layers .layer-5 {
+    position: absolute;
+    content: "";
+    background-color: #ff315049;
+
+    width: 200px;
+    width: 200px;
+    left: 25%;
+    clip-path: polygon(50% 32%, 23% 42%, 65% 66%);
+    z-index: -1;
+    height: 200px;
+}
+
+/* End Landing */
+/* Start Features */
+.features .icon-holder {
+    height: 200px;
+    position: relative;
+}
+.features .icon-holder svg {
+    left: 50%;
+    bottom: 0;
+    position: absolute;
+    transform: translatex(-50%);
+}
+.features .icon-holder svg.number {
+    font-size: 12rem;
+    color: var(--section-color);
+}
+.features .icon-holder svg.icon {
+    color: var(--red-color);
+}
+.features h4 {
+    margin: 2rem 0;
+    text-transform: uppercase;
+    color: black;
+}
+/* End Features */
+/* Start Our Work */
+.our-work {
+    background-color: var(--section-color);
+    position: relative;
+}
+.our-work ul li {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+.our-work ul .active {
+    background-color: var(--red-color);
+    color: white;
+}
+.our-work ul li:not(.active):hover {
+    color: var(--red-color);
+}
+.our-work .box {
+    background-color: white;
+    margin-bottom: 1rem;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    overflow: hidden;
+}
+.our-work .box::before {
+    content: attr(data-work);
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    color: white;
+    font-weight: bold;
+    transition: var(--main-transition);
+    font-size: 1.5rem;
+    transform: translateX(calc(-100% - 5px));
+}
+.our-work .box:hover::before {
+    transform: translateX(0);
+}
+.our-work .box-show {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.6);
+    left: 50%;
+    z-index: 999;
+    pointer-events: none;
+    margin: 0;
+    box-shadow: #777 0 0 10px 0px, black 0 0 1px 0;
+    overflow: visible;
+}
+.our-work .box-show::before {
+    content: none;
+}
+.our-work .box-show::after {
+    content: "x";
+    position: absolute;
+    pointer-events: all;
+    font-size: 10px;
+    background-color: black;
+    width: 17px;
+    height: 17px;
+    color: white;
+    cursor: pointer;
+    text-transform: capitalize;
+    line-height: 17px;
+    left: -8px;
+    border-radius: 50%;
+    top: -10px;
+    font-family: inherit;
+}
+
+/* End Our Work */
+/* Start Stuff */
+.stuff .description {
+    max-width: 500px;
+}
+/* End Stuff */
+/* Start Team */
+.team {
+    background-color: var(--section-color);
+}
+.team .container > h2 {
+    color: black;
+    font-weight: bold;
+}
+.team .box {
+    position: relative;
+    transition: var(--main-transition);
+}
+
+.team .box h4 {
+    background-color: var(--red-color);
+}
+
+@media (min-width: 768px) {
+    .team .box.active {
+        transform: scale(1.05);
+    }
+    .team .box.dont-active {
+        transform: scale(0.9);
+    }
+    .team .box.active blockquote {
+        color: black !important;
+    }
+}
+/* End Team */
+/* Start Project */
+.project {
+    background-color: var(--dark-color);
+}
+/* End Project */
+/* Start Blog */
+.blog .card {
+    cursor: pointer;
+    transition: var(--main-transition);
+    margin-bottom: 1rem;
+}
+.blog .card:hover {
+    box-shadow: #bbbb 0 0 10px 0px;
+}
+.blog .card span {
+    transition: var(--main-transition);
+}
+.blog .card:hover span {
+    color: var(--red-color) !important;
+}
+/* End Blog */
+/* Start Subscribe */
+
+.subscribe {
+    background-color: var(--red-color);
+}
+.subscribe input[type="text"] {
+    border: none;
+    outline: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent transparent white transparent;
+    transition: var(--main-transition);
+}
+.subscribe input[type="text"]:focus {
+    border-color: white white white white;
+    border-radius: 50px;
+    box-shadow: #555 0 0 5px 0;
+}
+.subscribe ::placeholder {
+    color: #f7f7f7f7;
+}
+.subscribe input[type="submit"] {
+    background: var(--dark-color);
+    color: white;
+}
+/* End Subscribe */
+/* Start Footer */
+.footer {
+    background-color: var(--dark-color);
+}
+.footer .info .logo {
+    color: white;
+    font-size: 2.3rem;
+    font-family: fantasy;
+}
+.footer .info .copyright span {
+    color: var(--red-color);
+    font-weight: bold;
+}
+.footer li {
+    transition: var(--main-transition);
+    cursor: pointer;
+    position: relative;
+}
+.footer li::before {
+    content: "";
+    position: absolute;
+    transition: var(--main-transition);
+    left: -15px;
+    top: 50%;
+    transform: translatey(-50%);
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent transparent transparent var(--red-color);
+    opacity: 0;
+}
+.footer li:hover,
+.footer li:hover::before {
+    color: white;
+    opacity: 1;
+}
+.footer .contact li::before {
+    content: none;
+}
+.footer .contact a:hover {
+    background-color: white;
+    color: var(--red-color);
+}
+.footer .contact li svg {
+    width: 20px;
+    height: 20px;
+}
+.footer .contact li a:hover {
+    background-color: transparent;
+}
+.footer .contact li svg.youtube {
+    background-color: #ff0000;
+}
+.footer .contact li svg.in {
+    background-color: #0077b5;
+}
+.footer .contact li svg.twitter {
+    background-color: #1da1f2;
+}
+.footer .contact li svg.facebook {
+    background-color: #1877f2;
+}
+
+.footer .contact {
+    transition: var(--main-transition);
+}
+
+/* End Footer */

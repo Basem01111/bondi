@@ -1,0 +1,25 @@
+* {
+    font-weight: 900 !important;
+}
+.main-btn {
+    font-size: 19px;
+}
+.main-title p {
+    font-size: 19px;
+}
+ul {
+    padding: 0;
+}
+/* start Navbar */
+
+.navbar .nav-link {
+    font-size: 19px;
+}
+
+.navbar .lng::before {
+    content: none;
+}
+/* start landing */
+.landing h1 {
+    font-weight: 900;
+}
